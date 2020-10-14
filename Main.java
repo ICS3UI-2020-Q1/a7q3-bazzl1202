@@ -1,12 +1,18 @@
 /**
- *
+ * Produces random number of asterisks on a number of lines
  * @author Liana Bazzarella
  */
 public class Main {
 
-  public static void chaotic(int numberOfLines){
-    for(int i = math.random(); i <= 5; i++)
-      System.out.print("*");
+  public static void chaotic( int numberOfLines){
+    for( int j = 1; j <= numberOfLines; j++){
+      int numberStars = (int)(Math.random()*(5 - 1 + 1))+ 1;
+      for( int i = 1; i <= numberStars; i++){
+        System.out.print("*");
+      }
+      System.out.println(" ");
+    }
+  
   }
 
   /**
@@ -15,6 +21,8 @@ public class Main {
    */
   public static void main(String[] args) {
     // TODO code application logic here
-    chaotic(5);
+    chaotic(20);
+    
+  
   }
 }
